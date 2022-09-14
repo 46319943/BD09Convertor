@@ -12,7 +12,7 @@ Python版本的BD09坐标转换工具
 pip install bd09convertor
 ```
 
-Or specify the `index-url` if your mirror hasn't cache the package.
+Or specify the `index-url` if your mirror hasn't cached the package.
 ```
 pip install bd09convertor -i https://pypi.org/simple
 ```
