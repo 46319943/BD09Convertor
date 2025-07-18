@@ -54,9 +54,8 @@ def convertLL2MC(lng, lat):
     if cE is None:
         for cD in range(len(LLBAND)):
             cD_minus = len(LLBAND) - 1 - cD
-
             if lat <= (-LLBAND[cD_minus]):
-                cE = LLBAND[cD_minus]
+                cE = LL2MC[cD_minus]
                 break
 
     return convertor(lng, lat, cE)
@@ -89,3 +88,5 @@ def getLoop(cD, cC, T):
 if __name__ == '__main__':
     print(convertMC2LL(12943772.884424742, 4832666.423350099))
     print(convertLL2MC(116.274625, 39.961627))
+    # Test for the reported issue
+    print(convertLL2MC(110.50745534155948, -39.35767907834416))
