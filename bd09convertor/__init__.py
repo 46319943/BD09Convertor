@@ -48,7 +48,7 @@ def convertMC2LL(lng, lat):
             cF = MC2LL[cE]
             break
 
-    return convertor(lng_abs, lat_abs, cF)
+    return convertor(lng, lat, cF)
 
 
 def convertLL2MC(lng, lat):
