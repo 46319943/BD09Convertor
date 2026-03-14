@@ -59,7 +59,7 @@ convertWGS842BD09MC(116.274625, 39.961627)
 ```
 
 # Reference
-BD09 is a CRS (Coordinate Reference System) encrypted by Baidu based on GCJ09 CRS.
+BD09 is a CRS (Coordinate Reference System) encrypted by Baidu based on GCJ02 CRS.
 
 BD09LL represents longitude and latitude.
 BD09MC represents coordinate with meter based unit like Web Mercator projection.
