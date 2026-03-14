@@ -33,6 +33,20 @@ class ConversionTests(unittest.TestCase):
         wgs_back = convertBD09MC2WGS84(*mc)
         self.assertClosePair(wgs, wgs_back)
 
+    def test_bd09ll_bd09mc_roundtrip_negative(self):
+        # Negative longitude and latitude to exercise sign handling in BD09LL<->BD09MC
+        ll = (-73.985428, -40.748817)
+        mc = convertLL2MC(*ll)
+        ll_back = convertMC2LL(*mc)
+        self.assertClosePair(ll, ll_back, tol=1e-6)
+
+    def test_wgs84_bd09mc_roundtrip_negative(self):
+        # Negative longitude and latitude to exercise sign handling in WGS84<->BD09MC
+        wgs = (-73.985428, -40.748817)
+        mc = convertWGS842BD09MC(*wgs)
+        wgs_back = convertBD09MC2WGS84(*mc)
+        self.assertClosePair(wgs, wgs_back)
+
 
 if __name__ == '__main__':
     unittest.main()
